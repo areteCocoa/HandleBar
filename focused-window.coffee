@@ -1,7 +1,7 @@
 #command: 'R="/usr/local/bin/kwmc query window focused float"; echo "<$(R)>$(/usr/local/bin/kwmc query window focused name)</$(R)>"'
 command: "echo $(/usr/local/bin/kwmc query window focused name)"
 
-refreshFrequency: 1000 # ms
+refreshFrequency: 200
 
 render: (output) ->
   "#{output}"
@@ -16,6 +16,6 @@ style: """
   padding-left: 10px
   overflow: hidden
   text-overflow: ellipsis
-  width: 500px
+  width: 250px
   background-color: #FF0000
 """
