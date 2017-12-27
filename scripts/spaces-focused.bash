@@ -1,9 +1,9 @@
-#!/bin/bash
+##!/bin/bash
 
-spacec=$(kwmc query space list | wc -l)
+spacec=$(/usr/local/bin/kwmc query space list | wc -l)
 
 # Get the active space id for later
-active="$(kwmc query space active id)"
+active="$(/usr/local/bin/kwmc query space active id)"
 
 # Start json "headers"
 printf "{\n"
@@ -44,7 +44,7 @@ do
 	  printf ","
     fi
     
-done <<< "$(kwmc query space list)"
+done <<< "$(/usr/local/bin/kwmc query space list)"
 
 # End spaces
 printf "\n\t]\n"
